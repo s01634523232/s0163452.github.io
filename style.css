@@ -20,10 +20,28 @@
   flex: 3;
   order: 2;
 }
-@media screen and (min-width: 800px) {
-  #main-aside-wrapper {
-    flex-direction: row;
-  }
+@media screen and (orientation: portrait) and (min-width: 720px) {
+
+    nav a {
+        display: block;
+    }
+
+    #b1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link-list {
+        order: 1;
+    }
+
+    .form {
+        order: 2;
+    }
+
+    .table {
+        order: 3;
+    }
 }
 .headerblock {
     width:100%; 
