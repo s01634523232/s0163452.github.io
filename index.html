@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+$(function(){
+    $(".ajaxForm").submit(function(e){
+        e.preventDefault();
+        var href = $(this).attr("action");
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: href,
+            data: $(this).serialize(),
+            success: function(response){
+                if(response.status == "success"){
+                    alert("We received your submission, thank you!");
+                }else{
+                    alert("An error occured: " + response.message);
+                }
+            }
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="https://holyhotpants.github.io/index8.html" class="open-popup">Действовать</a>
+    </div>
+    
+
+    <div class="popup__bg"> 
+        <form class="ajaxForm popup" action="https://formcarry.com/s/MnGhyNqlx8q" method="POST" accept-charset="UTF-8">
+            <img src="close.png" class="close-popup">
+            <label>
+                <input type="text" name="Name">
+                <div class="label__text">
+                    Ваше имя:
+                </div>
+            </label>
+            <label>
+                <input type="email" name="email">
+                <div class="label__text">
+                    Ваш email:
+                </div>
+            </label>
+            <label>
+                <textarea name="Message"></textarea>
+                <div class="label__text">
+                    Вы любите слушать пение китов?:
+                </div>
+            </label>
+            <label class="custom-checkbox"> 
+                <input class="hidden-checkbox" type="checkbox">
+                <div class="checkbox"> 
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#ffffff" d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+                </div>
+                Согласен с политикой обработки персональных данных
+            </label>
+            <button type="submit" name="formButton">Отправить</button>
+        </form>
+    </div>  
+
+    <script src="popap.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿
+header img {
+     float:left;
+     margin-right:20px;
+ }
+header,footer{
+    background:pink;
+}
+header div{
+    vertical-align:central;
+}
+header div,footer p{
+    max-width:960px;
+}
+
+nav{
+    background-color:#d23d3d;
+    margin-bottom:10px;
+    
+}
+footer{
+    height:30px;
+}
+
+tr:nth-child(even){
+   background:yellow;     
+}
+table,th,td{
+    border:1px solid black;
+    margin-top:10px;
+}
+form{
+    background-color:yellow;
+}
+ul{
+    background-color:yellow;
+}
+
+}
+
+
+
+
